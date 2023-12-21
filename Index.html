@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masum_Portfolio</title>
+    <link rel="stylesheet" href="Styles.css">
+    <script src="https://kit.fontawesome.com/8c10d91d93.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <h1> Hi,<br>I'm <span>Masum Patel.</span></h1>
+            
+        </div>
+        </div>
+    </div> 
+   <!-- ----------------about------------- -->
+   <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images\Masum-Photo.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title"> About Me</h1>
+                <p> I am currently seeking employment as a web-developer or data analyst. 
+                    I am positioned in Chicago area and am willing to relocate for an opportunity.
+                    I enjoy creating unique, interactive and user-friendly websites and web applications.                    
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                </div>
+                <div class="tab-contents active-tab" id="education">
+                    <ul>
+                        <li><span>Gujarat Technological University</span><br>Bachelor of computer Engineering</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Data Analyst</span><br>Sunrise Sound Inc.</li>
+                        <li><span>Web Developer Intern</span><br>CreArt Solutions</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="skills">
+                    <ul>
+                        <li><span>Languages</span><br>HTML, CSS, JavaScript, Java, Python</li>
+                        <li><span>Front-End Frameworks</span><br>Angular</li>
+                        <li><span>Database Management</span><br>MySQL</li>
+                        <li><span>Tools</span><br>Visual Studio Code, Android Studio, MS Excel, Google Colab</li>
+                        <li><span>BI Tool</span><br>Tableau</li>
+                        <li><span>Version Control</span><br>GitHub</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+   <!-- ----------Portfolio--------- -->
+    <div id="project">
+        <div class="container">
+            <h1 class="sub-title">My Portfolio</h1>
+            <div class="project-list">
+                <div class="project2">
+                    <video src="Images\Detection_video.mp4" controls></video>
+                </div>
+                <div class="project1">
+                    <img src="Images\testdetection.png">
+                    <div class="layer">
+                        <h2>Object Detection</h2>
+                        <p>Created an application that detects road objects in an image or a video.</p>
+                        <p class="displayOverlayLink" data-popup-id="popup1"><strong><u>Learn more</u></strong></p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-experience">
+                <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Krishna Restaurant</h2>
+                        <p>Created a website for krishna restaurant using HTMl, CSS, and JavaScript which included Home, About, Gallery, Contact Us page with view menu and 'Book a Table' option.</p>
+                        <p class="displayOverlayLink" data-popup-id="popup2">Learn more</p>
+                </div>
+                <div>
+                    
+                        <i class="fa-solid fa-code"></i>
+                        <h2>CreArt Solutions</h2>
+                        <p>Redesigned CreArt Solutions' 'About Us' page to make it iteractive and user-friendly.</p>
+                        <p class="displayOverlayLink" data-popup-id="popup3" >Learn more</p>
+                </div>
+                <div>
+                     <i class="fa-solid fa-chart-line"></i>
+                     <h2>Sunrise Sound</h2>
+                     <p>Oraganized and cleaned past and current sales data in MS Excel and created a tableau dashboards using pivot tables to visualize different business related charts. Implemented a Min/Max strategy to maintain inventory using insights from sales data.</p>
+                     <p class="displayOverlayLink" data-popup-id="popup4" >Learn more</p>
+                </div>
+
+            </div>
+
+            <div class="overlay" id="overlay">
+                <div class="popup-content" id="popup1">
+                    <span class="close" data-popup-id="popup1">&times;</span>
+                    <h2>Object Detection Project</h2>
+                    <ul>
+                        <li>Created and trained a model using Reinforcement learinging to detect commom road objects in India.</li>
+                        <li>Assigned more than 20 object's classes to diffentiate between various road objects.</li>
+                        <li>Each detected object is highlighted using a bounding box with confidence probability.</li>
+                    </ul>
+                </div>
+                
+                <div class="popup-content" id="popup2">
+                    <span class="close" data-popup-id="popup2">&times;</span>
+                    <h2>Krishna Restaurant Website</h2>
+                    <Ul>
+                        <li>Created a website for krishna restaurant using HTMl, CSS, and JavaScript which includes 'Home', 'About Us', 'Gallery' and 'Contact Us' page.</li>
+                        <li>Website displayed menu items with prices and implemented a 'Book a Table' option for a customers with the help of PHP and MYSQL Database.</li>
+                        <li>Designed a slideshow of restaurant's images in 'Gallery' and implemented a google map in the 'Contact Us' Page.</li>
+                    </Ul>
+                </div>
+                
+                <div class="popup-content" id="popup3">
+                    <span class="close" data-popup-id="popup3">&times;</span>
+                    <h2>CreArt Solutions Internship</h2>
+                    <ul>
+                        <li>Redesigned CreArt Solutions' 'About Us' page to make it iteractive and user-friendly.</li>
+                        <li>Gained industry level programming experience in HTML,CSS, and JavaScript.</li>
+                        <li>Acquired team colaboration skills in order to meet project requirements and deadlines.</li>
+                    </ul>
+                </div>
+                
+                <div class="popup-content" id="popup4">
+                    <span class="close" data-popup-id="popup4">&times;</span>
+                    <h2>Sunrise Sound Data Analysis</h2>
+                    <ul>
+                        <li>Oraganized and cleaned past and current sales data in MS Excel to analyze it and created a tableau dashboards using pivot tables to visualize different business related charts to easily extract data patterns.</li>
+                        <li>Utilized MS Excel to analyze past sales data to predict quantity of products to keep in inventory using sales-forecasting.</li> 
+                        <li>Implemented a Min/Max stretegy for inventory maintenance using last year's sales data to compute re-order point and quantity.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------contact-------------->
+   <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>patelmasum710@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>(224) 532-9491</p>
+                <p><i class="fa-solid fa-language"></i><b>Languages:</b> English, Hindi, Gujarati</p>
+               <div class="social-icons">
+                <a href="https://www.linkedin.com/in/masumpatel0710"><i class="fa-brands fa-linkedin"></i></a>
+               </div> 
+            </div>
+            <div class="contact-right">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47346.84125357689!2d-87.92431950000005!3d42.1250815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fbb3f3fe936f3%3A0xad4f6baa72651d0f!2sWheeling%2C%20IL!5e0!3m2!1sen!2sus!4v1702487000774!5m2!1sen!2sus" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright &copy; Masum Patel.</p>
+    </div>
+   </div>
+   <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }   
+        
+   </script>
+   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+   <script>
+    $(window).scroll(function() {
+        if($(window).scrollTop()){
+            $("nav").addClass("black");
+        }
+        else{
+            $("nav").removeClass("black");
+        }
+    })
+   </script>
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    var displayOverlayLinks = document.querySelectorAll(".displayOverlayLink");
+    var overlay = document.getElementById("overlay");
+
+    displayOverlayLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+           
+            var popups = document.querySelectorAll(".popup-content");
+            popups.forEach(function (popup) {
+                popup.style.display = "none";
+            });
+
+            overlay.style.display = "none";
+            document.body.classList.remove("blur");
+
+            var popupId = link.getAttribute("data-popup-id");
+            var popup = document.getElementById(popupId);
+
+            overlay.style.display = "block";
+            popup.style.display = "block";
+            document.body.classList.add("blur");
+        });
+    });
+
+    var closeButtons = document.querySelectorAll(".close");
+    closeButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            var popupId = button.getAttribute("data-popup-id");
+            var popup = document.getElementById(popupId);
+
+            overlay.style.display = "none";
+            popup.style.display = "none";
+            document.body.classList.remove("blur");
+        });
+    });
+
+    window.addEventListener("click", function (event) {
+        if (event.target === overlay) {
+            overlay.style.display = "none";
+            document.body.classList.remove("blur");
+
+            var popups = document.querySelectorAll(".popup-content");
+            popups.forEach(function (popup) {
+                popup.style.display = "none";
+            });
+        }
+    });
+});
+
+   </script>
+
+</body>
+</html>
