@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masum_Portfolio</title>
+    <!--style>
+        nav.black ul{
+            left: 0;
+        }
+    </style-->
     <link rel="stylesheet" href="Styles.css">
     <script src="https://kit.fontawesome.com/8c10d91d93.js" crossorigin="anonymous"></script>
 </head>
@@ -11,12 +16,16 @@
     <div id="header">
         <div class="container">
         <nav>
-            <ul>
+            <i class="fa-solid fa-bars" onclick="toggleSidebar()"></i>
+            
+            <ul id="sidemenu">
                 <li><a href="#header">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#project">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>  
             </ul>
+    
         </nav>
         <div class="header-text">
             <h1> Hi,<br>I'm <span>Masum Patel.</span></h1>
@@ -189,16 +198,7 @@
         
    </script>
    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-   <script>
-    $(window).scroll(function() {
-        if($(window).scrollTop()){
-            $("nav").addClass("black");
-        }
-        else{
-            $("nav").removeClass("black");
-        }
-    })
-   </script>
+
    <script>
     document.addEventListener("DOMContentLoaded", function () {
     var displayOverlayLinks = document.querySelectorAll(".displayOverlayLink");
@@ -250,6 +250,92 @@
 });
 
    </script>
+   <script>
+    $(document).ready(function () {
+      function toggleBlackClass() {
+        var screenWidth = $(window).width();
+        var nav = $("nav");
+  
+        if (screenWidth <= 600) {
+          nav.removeClass("black");
+        } else {
+          if ($(window).scrollTop()) {
+            nav.addClass("black");
+          } else {
+            nav.removeClass("black");
+          }
+        }
+      }
+  
+      toggleBlackClass();
+  
+      $(window).resize(function () {
+        toggleBlackClass();
+      });
+  
+      $(window).scroll(function () {
+        toggleBlackClass();
+      });
+    });
+  </script>
+  
+  <script>
+  function openmenu() {
+    var sidebar = document.getElementById("sidemenu");
+    sidebar.style.left = "0";
+    sidebar.classList.add("active");
+}
+
+function closemenu() {
+    var sidebar = document.getElementById("sidemenu");
+    sidebar.style.left = "-150px";
+    sidebar.classList.remove("active");
+}
+
+function toggleSidebar() {
+    var sidebar = document.getElementById("sidemenu");
+    if (sidebar.classList.contains("active")) {
+        closemenu();
+    } else {
+        openmenu();
+    }
+}
+function isSmallerScreen() {
+    return window.innerWidth <= 600;
+}
+
+
+document.addEventListener("click", function (event) {
+    var sidebar = document.getElementById("sidemenu");
+    var isClickInsidebar = event.target.closest("#sidemenu");
+    if (!isClickInsidebar && sidebar.classList.contains("active")) {
+        closemenu();
+        console.log("Clicked outside sidebar");
+    }
+    if (isSmallerScreen()) {
+    if (event.target.classList.contains("fa-bars")) {
+        toggleSidebar();
+    }
+
+    if (isClickInsidebar && !event.target.classList.contains("fa-bars")) {
+        console.log("Clicked outside sidebar");
+        var isMenuLink =
+            event.target.tagName === "A" && event.target.closest("#sidemenu");
+
+        if (isMenuLink) {
+            closemenu();
+            console.log("Clicked on a menu link");
+        }
+    }
+    }
+});
+window.addEventListener("resize", function () {
+    if (!isSmallerScreen()) {
+        closemenu();
+    }
+});
+
+</script>
 
 </body>
 </html>
