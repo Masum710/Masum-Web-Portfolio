@@ -345,7 +345,7 @@ margin-top: 5%;
 
 /*---------------Contact--------------*/
 #contact{
-    padding-top: 2%;
+    padding-top: 3%;
 }
 .contact-left{
     flex-basis: 35%;
@@ -531,7 +531,7 @@ nav .fa-solid{
     flex-basis: 100%;
    }
    #contact{
-    margin-top: 15%;
+    margin-top: 20%;
    }
    .contact-left p{
     margin-left: 3%;
